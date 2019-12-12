@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:900&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    font-size: 12px;
+    color: #191919;
+    counter-reset: num;
+    }
+h1{
+        font-size: 30px;
+        color: #27198c;
+        font-weight: 900; 
+        line-height: 44px; 
+ }
+head .p{
+        font-size: 16px;
+        font-weight: 600; 
+        line-height: 30px; 
+        
+ }
+
+.main{
+    padding: 70px 60px;
+    background-color: #f6f6f6;
+    border: 1px solid #e5e5e5;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.second{
+    margin-top: 10px;
+}
+.two-images{
+    margin-top: -100px;
+}
+
+/*Content before*/
+h1::before{
+    content: 'Section heading';
+    position: absolute;
+    display: block;
+    top: -30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #bebebe;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+  }
+
+
+/*My Button*/
+.iconButton{
+    display: flex;
+    flex-flow: row-reverse;
+    flex-wrap: nowrap;
+    height: 3rem;
+    width: 50%;
+    border: 1px solid #fe7010;
+  }
+  .box{
+    width: 80%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .box p{
+    margin: 0px;
+    color: #27198c;
+    font-family: Muli;
+    font-size: 12px; 
+    font-weight: 900; 
+    letter-spacing: 1.4px; 
+    line-height: 15px; 
+    
+  }
+  .myIcon{
+    background-color: #fe7010;
+    width: 20%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.myText p{
+  font-size: 12px; 
+  font-weight: bold;
+}
+  /**HOVER*/
+}
+.myIcon:hover, .myIcon:hover +.box, .myIcon:hover +.box >p{
+    color:white;
+      background-color:black;
+      border:none;
+      cursor:pointer;
+      transition: 0.3s;
+    }
+
+
+    /*Cards*/
+    .myRow{
+        display: flex;
+      }
+      .myCard{
+        margin-bottom: 1em;
+        text-align: center;
+      }
+      .myText, .myText p{
+        margin-top: 5px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #27198c;
+        font-family: RobotoSlab-Bold;
+      }
+
+/*Media Queries*/
+@media screen and (min-width:769px){
+    .myCard::before{
+    counter-increment: num;
+    content: '0'counter(num);
+    position: absolute;
+    display: block;
+    top: -55px;
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #bebebe;
+    font-family: 'Muli', sans-serif;
+    font-weight: 900;
+    line-height: 58px;
+  }
+  }
+
+
+  @media (max-width:768px){
+
+        .myRow{
+          margin-top: 0px;
+          margin-left: 0px;
+          display:block;
+          
+        }
+        .myCard{
+          display:flex;
+          flex-flow: row;
+          text-align: left;
+          padding: 0px;
+          justify-content: left;
+          align-items: center;
+        
+        }
+        .myText p{
+          font-size: 10px;;
+        
+          
+        }
+        .myImg{
+            margin-right: 5%;
+        }
+
+        .two-images{
+            margin-top: 0px;
+        }
+      
+  }
+
+
+  @media (max-width:425px){
+     
+    .cards-col{
+        margin-top: 20px;
+    }
+    
+  }
